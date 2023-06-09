@@ -11,9 +11,9 @@
     <meta name="robots" content="index,follow">
 </head>
 <body>
-    <select id="language-select" onchange="changeLanguage(event)">
+    <select id="language-select" onchange="changeLanguage()">
         <option value="en">English</option>
-        <option value="zh">中文</option>
+        <option value="zh" selected>中文</option>
     </select>
 
     <h1>张育宁 (Brian)</h1>
@@ -23,7 +23,6 @@
 
     <script>
     function changeLanguage() {
-        event.preventDefault();
         var language = document.getElementById("language-select").value;
         if (language === 'zh') {
             window.location.href = "/index-zh.html";  
